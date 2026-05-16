@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use — StageCraft AI Interior Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --text: #1a1a2e; --muted: #5c5c7a; --accent: #4f46e5; --bg: #eef2ff; --card: #ffffff; --navy: #0f1d3b; }
+    * { box-sizing: border-box; }
+    body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.65; color: var(--text); background: var(--bg); margin: 0; padding: 0 0 48px; }
+    .site-header { background: linear-gradient(135deg, var(--navy) 0%, #312e81 55%, #6366f1 100%); color: #fff; text-align: center; padding: 48px 20px 40px; }
+    .site-header h1 { font-family: 'DM Serif Display', serif; font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 400; margin: 8px 0 4px; }
+    .site-header .doc-type { font-size: .85rem; letter-spacing: 2px; text-transform: uppercase; opacity: .8; }
+    .header-icon { font-size: 2.5rem; display: block; margin-bottom: 8px; }
+    .container { max-width: 720px; margin: -24px auto 0; background: var(--card); padding: 32px 28px; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,.08); position: relative; z-index: 1; }
+    h1 { font-size: 1.75rem; margin: 0 0 8px; color: var(--accent); }
+    h2 { font-size: 1.15rem; margin: 28px 0 10px; border-bottom: 1px solid #e8e8f0; padding-bottom: 6px; }
+    p, li { color: var(--text); font-size: 0.95rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 24px; }
+    a { color: var(--accent); }
+    ul { padding-left: 1.25rem; }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <span class="header-icon">📜</span>
+  <h1>StageCraft — AI Interior Design</h1>
+  <div class="doc-type">Terms of Use</div>
+</header>
+  <div class="container">
+    <p class="meta">Package: <code>com.jaystudio.ai.home.interior.design</code><br />
+    Last updated: May 16, 2026</p>
 
+    <p>These Terms of Use (“Terms”) govern your access to and use of the <strong>StageCraft — AI Interior Design</strong> application (“App”) provided by <strong>Jay Studio</strong> (“we”, “us”, “our”). By downloading or using the App, you agree to these Terms and our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+
+    <h2>1. Eligibility</h2>
+    <p>You must be at least 13 years old (or the minimum age required in your country) to use the App. If you are under 18, you represent that you have parental or guardian consent.</p>
+
+    <h2>2. Description of Service</h2>
+    <p>StageCraft uses artificial intelligence to transform interior room photos based on styles, palettes, and prompts you select. The App offers:</p>
+    <ul>
+      <li>AI-generated interior design images</li>
+      <li>Credit-based usage (including free welcome credits and purchasable packs)</li>
+      <li>Local design history on your device</li>
+      <li>Optional in-app purchases via Google Play</li>
+      <li>Optional advertising when enabled</li>
+    </ul>
+    <p>AI outputs are for inspiration and visualization only. They are not professional architectural, engineering, or legal advice.</p>
+
+    <h2>3. AI Credits &amp; Purchases</h2>
+    <ul>
+      <li>Each AI generation or edit consumes credits as shown in the App.</li>
+      <li>Credit packs are one-time purchases processed through Google Play Billing and managed via RevenueCat.</li>
+      <li>Prices, credit amounts, and features may change; current offers are shown at purchase time.</li>
+      <li>Refunds follow <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play refund policies</a>.</li>
+      <li>Use “Restore Purchases” if you reinstall the App on the same Google account.</li>
+    </ul>
+
+    <h2>4. User Content &amp; License</h2>
+    <ul>
+      <li>You retain ownership of photos you upload.</li>
+      <li>You grant us a limited license to process your photos solely to provide the service (generate and deliver AI designs).</li>
+      <li>You represent that you have the right to upload the images you submit and that they do not violate any third-party rights or laws.</li>
+      <li>Do not upload unlawful, harmful, explicit, or copyrighted content without permission.</li>
+    </ul>
+
+    <h2>5. Acceptable Use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use the App for illegal purposes or to harm others</li>
+      <li>Reverse engineer, scrape, or abuse the API</li>
+      <li>Circumvent credit, paywall, or advertising systems</li>
+      <li>Submit malware, spam, or automated bulk requests</li>
+      <li>Misrepresent AI-generated images as guaranteed real-world outcomes</li>
+    </ul>
+    <p>We may suspend or terminate access for violations.</p>
+
+    <h2>6. Intellectual Property</h2>
+    <p>The App, branding, UI, and underlying technology are owned by Jay Studio or licensors. AI-generated images are provided for your personal, non-commercial use unless otherwise stated. Third-party services (Google, Firebase, RevenueCat, Unsplash, etc.) have their own terms.</p>
+
+    <h2>7. Disclaimers</h2>
+    <p>THE APP AND AI OUTPUTS ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT DESIGNS WILL BE ACCURATE, COMPLETE, OR SUITABLE FOR CONSTRUCTION OR PURCHASE DECISIONS.</p>
+
+    <h2>8. Limitation of Liability</h2>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, JAY STUDIO SHALL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, OR GOODWILL, ARISING FROM YOUR USE OF THE APP. OUR TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID US IN THE TWELVE (12) MONTHS BEFORE THE CLAIM, OR USD $50, WHICHEVER IS GREATER.</p>
+
+    <h2>9. Advertising</h2>
+    <p>When enabled, the App may show Google ads (e.g. rewarded interstitial after closing the paywall without purchase). Ad serving is subject to Google’s policies. You can manage ad personalization in your device settings.</p>
+
+    <h2>10. Analytics &amp; Remote Configuration</h2>
+    <p>We use Firebase Analytics to understand app usage and Firebase Remote Config to deliver feature settings. See our <a href="privacy-policy.html">Privacy Policy</a> for details.</p>
+
+    <h2>11. Termination</h2>
+    <p>You may stop using the App at any time by uninstalling it. We may modify, suspend, or discontinue the App or these Terms with notice where reasonable. Sections that by nature should survive (disclaimers, liability, governing law) will survive termination.</p>
+
+    <h2>12. Governing Law</h2>
+    <p>These Terms are governed by the laws of India, without regard to conflict-of-law principles, unless mandatory local law requires otherwise. Disputes shall be resolved in courts of competent jurisdiction in India, unless applicable consumer law provides otherwise.</p>
+
+    <h2>13. Changes</h2>
+    <p>We may update these Terms. The updated version will be posted at this URL with a revised “Last updated” date. Continued use constitutes acceptance.</p>
+
+    <h2>14. Contact</h2>
+    <p>Questions about these Terms?<br />
+    Email: <a href="mailto:support@jaystudio.ai">support@jaystudio.ai</a></p>
+
+    <p class="meta"><a href="privacy-policy.html">Privacy Policy</a></p>
+  </div>
+</body>
+</html>

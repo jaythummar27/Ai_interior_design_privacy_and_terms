@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — StageCraft AI Interior Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --text: #1a1a2e; --muted: #5c5c7a; --accent: #4f46e5; --bg: #eef2ff; --card: #ffffff; --navy: #0f1d3b; }
+    * { box-sizing: border-box; }
+    body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.65; color: var(--text); background: var(--bg); margin: 0; padding: 0 0 48px; }
+    .site-header { background: linear-gradient(135deg, var(--navy) 0%, #312e81 55%, #6366f1 100%); color: #fff; text-align: center; padding: 48px 20px 40px; }
+    .site-header h1 { font-family: 'DM Serif Display', serif; font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 400; margin: 8px 0 4px; }
+    .site-header .doc-type { font-size: .85rem; letter-spacing: 2px; text-transform: uppercase; opacity: .8; }
+    .header-icon { font-size: 2.5rem; display: block; margin-bottom: 8px; }
+    .container { max-width: 720px; margin: -24px auto 0; background: var(--card); padding: 32px 28px; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,.08); position: relative; z-index: 1; }
+    h1.section-title { font-size: 1.75rem; margin: 0 0 8px; color: var(--accent); font-family: 'DM Serif Display', serif; }
+    h2 { font-size: 1.15rem; margin: 28px 0 10px; border-bottom: 1px solid #e8e8f0; padding-bottom: 6px; }
+    p, li { color: var(--text); font-size: 0.95rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 24px; }
+    a { color: var(--accent); }
+    ul { padding-left: 1.25rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 12px 0; }
+    th, td { border: 1px solid #e8e8f0; padding: 10px; text-align: left; vertical-align: top; }
+    th { background: #f3f4f8; }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <span class="header-icon">🏠</span>
+  <h1>StageCraft — AI Interior Design</h1>
+  <div class="doc-type">Privacy Policy</div>
+</header>
+  <div class="container">
+    <p class="meta">Package: <code>com.jaystudio.ai.home.interior.design</code><br />
+    Last updated: May 16, 2026</p>
 
+    <p>This Privacy Policy describes how <strong>Jay Studio</strong> (“we”, “us”, “our”) collects, uses, and shares information when you use the <strong>StageCraft — AI Interior Design</strong> mobile application (the “App”). By using the App, you agree to this policy.</p>
+
+    <h2>1. Information We Collect</h2>
+    <h3>1.1 Information you provide</h3>
+    <ul>
+      <li><strong>Room photos</strong> — images you upload or capture to generate AI interior designs.</li>
+      <li><strong>Design preferences</strong> — room type, style, color palette, design mode, and optional custom text prompts.</li>
+    </ul>
+    <h3>1.2 Information collected automatically</h3>
+    <ul>
+      <li><strong>Device identifier</strong> — a persistent device ID derived from Android settings (e.g. ANDROID_ID) or a generated UUID, used to manage credits and sync data. We do not require account registration.</li>
+      <li><strong>App settings</strong> — theme (dark/light), font scale, and font family stored locally on your device.</li>
+      <li><strong>Design history</strong> — generated design metadata and image references stored locally (Room database) on your device.</li>
+      <li><strong>Purchase information</strong> — transaction and entitlement data processed by Google Play and RevenueCat (we do not store full payment card details).</li>
+      <li><strong>Analytics data</strong> — Firebase Analytics may collect app usage events, device type, OS version, and general interaction data.</li>
+      <li><strong>Advertising data</strong> — when ads are shown, Google AdMob may collect advertising IDs and related data per Google’s policies.</li>
+      <li><strong>Remote configuration</strong> — Firebase Remote Config fetches feature flags; no personal content is sent in config requests.</li>
+    </ul>
+
+    <h2>2. How We Use Information</h2>
+    <ul>
+      <li>Generate AI interior design images from your room photos.</li>
+      <li>Manage AI credits, purchases, and restore purchases.</li>
+      <li>Store your design history on your device.</li>
+      <li>Improve the App, fix bugs, and understand usage via analytics.</li>
+      <li>Display ads when enabled (e.g. after closing the paywall without purchase).</li>
+      <li>Deliver app updates and remote feature configuration.</li>
+    </ul>
+
+    <h2>3. How We Share Information</h2>
+    <table>
+      <thead>
+        <tr><th>Service</th><th>Purpose</th><th>Provider</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>AI processing API</td><td>Submit room images and prompts to generate designs</td><td>Our backend (hosted on Vercel)</td></tr>
+        <tr><td>Firebase Firestore</td><td>Store device credit balance</td><td>Google LLC</td></tr>
+        <tr><td>Firebase Analytics</td><td>Usage analytics</td><td>Google LLC</td></tr>
+        <tr><td>Firebase Remote Config</td><td>Feature flags and app configuration</td><td>Google LLC</td></tr>
+        <tr><td>Google Play Billing</td><td>In-app purchases</td><td>Google LLC</td></tr>
+        <tr><td>RevenueCat</td><td>Subscription and purchase management</td><td>RevenueCat, Inc.</td></tr>
+        <tr><td>Google AdMob</td><td>Rewarded interstitial advertising</td><td>Google LLC</td></tr>
+        <tr><td>Unsplash (via CDN)</td><td>Style preview thumbnail images</td><td>Unsplash</td></tr>
+      </tbody>
+    </table>
+    <p>We do not sell your personal information. We share data only as needed to operate the App or as required by law.</p>
+
+    <h2>4. Data Storage &amp; Security</h2>
+    <ul>
+      <li>Room photos are transmitted to our servers for AI processing; generated output URLs are returned to the App.</li>
+      <li>Credit flags may be stored in encrypted local preferences (Android Keystore).</li>
+      <li>Design history is stored locally on your device unless you delete it.</li>
+      <li>We use industry-standard measures, but no method of transmission or storage is 100% secure.</li>
+    </ul>
+
+    <h2>5. Data Retention</h2>
+    <ul>
+      <li>Local design history remains until you delete it or uninstall the App.</li>
+      <li>Server-side job data retention depends on our backend policies.</li>
+      <li>Firestore device records persist while you use the App to maintain credit balance.</li>
+      <li>Analytics data is retained per Google Firebase retention settings.</li>
+    </ul>
+
+    <h2>6. Your Choices &amp; Rights</h2>
+    <ul>
+      <li><strong>Photos</strong> — you choose when to upload; you can delete local history in the App.</li>
+      <li><strong>Ads</strong> — premium users / when ads are disabled via configuration, paywall-dismiss ads are not shown.</li>
+      <li><strong>Analytics</strong> — you may limit ad tracking in Android Settings → Google → Ads.</li>
+      <li><strong>Uninstall</strong> — removes local app data; remote identifiers may persist per provider policies.</li>
+    </ul>
+    <p>Depending on your region (e.g. EU/UK, California), you may have rights to access, correct, or delete personal data. Contact us below to exercise these rights.</p>
+
+    <h2>7. Children’s Privacy</h2>
+    <p>The App is not directed to children under 13 (or 16 in the EEA). We do not knowingly collect personal information from children. If you believe a child provided data, contact us and we will delete it.</p>
+
+    <h2>8. International Transfers</h2>
+    <p>Your information may be processed in countries other than your own, including the United States, where our service providers operate. We rely on appropriate safeguards where required by law.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy. We will post the new version at this URL and update the “Last updated” date. Continued use after changes means you accept the updated policy.</p>
+
+    <h2>10. Contact Us</h2>
+    <p>Questions about this Privacy Policy?<br />
+    Email: <a href="mailto:support@jaystudio.ai">support@jaystudio.ai</a></p>
+
+    <p class="meta"><a href="terms-of-use.html">Terms of Use</a></p>
+  </div>
+</body>
+</html>
