@@ -1,110 +1,514 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Use — StageCraft AI Interior Design</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root { --text: #1a1a2e; --muted: #5c5c7a; --accent: #4f46e5; --bg: #eef2ff; --card: #ffffff; --navy: #0f1d3b; }
-    * { box-sizing: border-box; }
-    body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.65; color: var(--text); background: var(--bg); margin: 0; padding: 0 0 48px; }
-    .site-header { background: linear-gradient(135deg, var(--navy) 0%, #312e81 55%, #6366f1 100%); color: #fff; text-align: center; padding: 48px 20px 40px; }
-    .site-header h1 { font-family: 'DM Serif Display', serif; font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 400; margin: 8px 0 4px; }
-    .site-header .doc-type { font-size: .85rem; letter-spacing: 2px; text-transform: uppercase; opacity: .8; }
-    .header-icon { font-size: 2.5rem; display: block; margin-bottom: 8px; }
-    .container { max-width: 720px; margin: -24px auto 0; background: var(--card); padding: 32px 28px; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,.08); position: relative; z-index: 1; }
-    h1 { font-size: 1.75rem; margin: 0 0 8px; color: var(--accent); }
-    h2 { font-size: 1.15rem; margin: 28px 0 10px; border-bottom: 1px solid #e8e8f0; padding-bottom: 6px; }
-    p, li { color: var(--text); font-size: 0.95rem; }
-    .meta { color: var(--muted); font-size: 0.85rem; margin-bottom: 24px; }
-    a { color: var(--accent); }
-    ul { padding-left: 1.25rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use — StageCraft — AI Interior Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:   #0F1D3B;
+            --blue:   #1E3A8A;
+            --accent: #2563EB;
+            --sky:    #3B82F6;
+            --teal:   #0EA5E9;
+            --green:  #059669;
+            --red:    #DC2626;
+            --amber:  #D97706;
+            --ink:    #1E293B;
+            --body:   #334155;
+            --muted:  #64748B;
+            --border: #CBD5E1;
+            --surface:#F1F5F9;
+            --white:  #FFFFFF;
+            --card-shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(30,58,138,.08);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            color: var(--body);
+            background: #EEF2FF;
+            min-height: 100vh;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, #0B1628 0%, #1E3A8A 55%, #1D4ED8 100%);
+            color: #fff;
+            padding: 56px 24px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .site-header::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 30% 40%, rgba(99,102,241,.2) 0%, transparent 55%),
+                        radial-gradient(ellipse at 80% 70%, rgba(14,165,233,.15) 0%, transparent 55%);
+            pointer-events: none;
+        }
+        .header-icon { font-size: 52px; display: block; margin-bottom: 16px; filter: drop-shadow(0 4px 12px rgba(0,0,0,.25)); }
+        .site-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 400;
+            letter-spacing: -.5px;
+            margin-bottom: 6px;
+        }
+        .site-header .doc-type { font-size: .9rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; opacity: .75; margin-bottom: 20px; }
+        .badge-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
+        .badge { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 4px 14px; font-size: .78rem; font-weight: 500; backdrop-filter: blur(4px); }
+
+        .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
+
+        .toc-strip {
+            background: var(--white); border-radius: 14px; box-shadow: var(--card-shadow);
+            padding: 20px 24px; margin: -28px 0 32px; position: relative; z-index: 2;
+        }
+        .toc-strip p { font-size: .78rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+        .toc-links { display: flex; flex-wrap: wrap; gap: 6px; }
+        .toc-links a { font-size: .82rem; color: var(--accent); text-decoration: none; background: var(--surface); border-radius: 6px; padding: 4px 10px; font-weight: 500; transition: background .15s, color .15s; }
+        .toc-links a:hover { background: var(--accent); color: #fff; }
+
+        .section { background: var(--white); border-radius: 16px; box-shadow: var(--card-shadow); padding: 32px; margin-bottom: 24px; scroll-margin-top: 24px; }
+        .section-head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1.5px solid var(--surface); }
+        .section-icon { width: 42px; height: 42px; border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+        .icon-blue   { background: #DBEAFE; }
+        .icon-green  { background: #D1FAE5; }
+        .icon-red    { background: #FEE2E2; }
+        .icon-amber  { background: #FEF3C7; }
+        .icon-purple { background: #EDE9FE; }
+        .icon-teal   { background: #CFFAFE; }
+        .icon-slate  { background: #F1F5F9; }
+        .icon-indigo { background: #E0E7FF; }
+
+        h2 { font-family: 'DM Serif Display', serif; font-size: 1.3rem; font-weight: 400; color: var(--ink); letter-spacing: -.3px; }
+        h3 { color: var(--accent); margin: 18px 0 8px; font-size: 1rem; font-weight: 600; }
+        .section-num { font-size: .72rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-top: 1px; }
+
+        p { line-height: 1.75; margin-bottom: 14px; font-size: .97rem; }
+        p:last-child { margin-bottom: 0; }
+        ul, ol { padding-left: 20px; margin-bottom: 14px; }
+        li { line-height: 1.75; font-size: .97rem; margin-bottom: 4px; }
+        strong { font-weight: 600; color: var(--ink); }
+        code { font-family: 'SF Mono', 'Fira Code', monospace; background: var(--surface); border-radius: 4px; padding: 1px 6px; font-size: .85em; color: var(--accent); border: 1px solid var(--border); }
+        a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+
+        .callout { border-radius: 10px; padding: 14px 18px; margin: 16px 0; font-size: .93rem; line-height: 1.65; }
+        .callout-blue   { background: #EFF6FF; border-left: 3px solid var(--accent); color: #1E40AF; }
+        .callout-green  { background: #ECFDF5; border-left: 3px solid var(--green);  color: #065F46; }
+        .callout-red    { background: #FFF1F2; border-left: 3px solid var(--red);    color: #9B1C1C; }
+        .callout-amber  { background: #FFFBEB; border-left: 3px solid var(--amber);  color: #92400E; }
+
+        .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--border); }
+        table { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 420px; }
+        thead tr { background: var(--surface); }
+        th { text-align: left; padding: 11px 14px; font-weight: 600; color: var(--ink); font-size: .82rem; text-transform: uppercase; letter-spacing: .5px; border-bottom: 1px solid var(--border); }
+        td { padding: 10px 14px; border-bottom: 1px solid var(--surface); vertical-align: top; line-height: 1.6; }
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background: #FAFBFF; }
+
+        .divider { height: 1px; background: var(--surface); margin: 20px 0; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #EFF6FF, #F0FDF4);
+            border: 1px solid #BFDBFE;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
+        .highlight-box h3 { margin-top: 0; color: var(--navy); }
+
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+        .col-box { background: var(--surface); border-radius: 10px; padding: 16px; border: 1px solid var(--border); }
+        .col-box h3 { color: var(--ink); margin-top: 0; font-size: .9rem; }
+
+        .footer { background: var(--navy); color: rgba(255,255,255,.65); text-align: center; padding: 28px 20px; font-size: .85rem; line-height: 1.8; }
+        .footer a { color: rgba(255,255,255,.85); }
+        .footer strong { color: #fff; }
+
+        @media (max-width: 600px) {
+            .section { padding: 20px 18px; }
+            .site-header { padding: 40px 20px 36px; }
+            .two-col { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
+
+<!-- ── Header ─────────────────────────────────────────────────── -->
 <header class="site-header">
-  <span class="header-icon">📜</span>
-  <h1>StageCraft — AI Interior Design</h1>
-  <div class="doc-type">Terms of Use</div>
+    <span class="header-icon">🏠</span>
+    <h1>StageCraft — AI Interior Design</h1>
+    <div class="doc-type">Terms of Use</div>
+    <div class="badge-row">
+        <span class="badge">📅 Last Updated: May 16, 2026</span>
+        <span class="badge">⚖️ Governed by Indian Law</span>
+        <span class="badge">✅ Google Play Developer Policy Compliant</span>
+        <span class="badge">📱 AdMob Policy Compliant</span>
+    </div>
 </header>
-  <div class="container">
-    <p class="meta">Package: <code>com.jaystudio.ai.home.interior.design</code><br />
-    Last updated: May 16, 2026</p>
 
-    <p>These Terms of Use (“Terms”) govern your access to and use of the <strong>StageCraft — AI Interior Design</strong> application (“App”) provided by <strong>Jay Studio</strong> (“we”, “us”, “our”). By downloading or using the App, you agree to these Terms and our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+<div class="page-wrap">
 
-    <h2>1. Eligibility</h2>
-    <p>You must be at least 13 years old (or the minimum age required in your country) to use the App. If you are under 18, you represent that you have parental or guardian consent.</p>
+    <!-- ── TOC ──────────────────────────────────────────────────── -->
+    <div class="toc-strip">
+        <p>Quick Navigation</p>
+        <div class="toc-links">
+            <a href="#acceptance">Acceptance</a>
+            <a href="#license">License</a>
+            <a href="#permitted">Permitted Use</a>
+            <a href="#prohibited">Prohibited Use</a>
+            <a href="#ads-terms">Advertising</a>
+            <a href="#photos-terms">Photos &amp; Content</a>
+            <a href="#ai-terms">AI &amp; Credits</a>
+            <a href="#design-disclaimer">Design Disclaimer</a>
+            <a href="#ip">Intellectual Property</a>
+            <a href="#thirdparty-terms">Third-Party Services</a>
+            <a href="#termination">Termination</a>
+            <a href="#liability">Limitation of Liability</a>
+            <a href="#governing">Governing Law</a>
+            <a href="#changes-terms">Changes</a>
+            <a href="#contact-terms">Contact</a>
+        </div>
+    </div>
 
-    <h2>2. Description of Service</h2>
-    <p>StageCraft uses artificial intelligence to transform interior room photos based on styles, palettes, and prompts you select. The App offers:</p>
-    <ul>
-      <li>AI-generated interior design images</li>
-      <li>Credit-based usage (including free welcome credits and purchasable packs)</li>
-      <li>Local design history on your device</li>
-      <li>Optional in-app purchases via Google Play</li>
-      <li>Optional advertising when enabled</li>
-    </ul>
-    <p>AI outputs are for inspiration and visualization only. They are not professional architectural, engineering, or legal advice.</p>
+    <!-- ── 1. Acceptance ─────────────────────────────────────────── -->
+    <div class="section" id="acceptance">
+        <div class="section-head">
+            <div class="section-icon icon-blue">✅</div>
+            <div><h2>Acceptance of Terms</h2><div class="section-num">Section 01</div></div>
+        </div>
+        <p>These Terms of Use ("Terms") constitute a legally binding agreement between you ("User") and <strong>LogicGridApps</strong>, operated by <strong>Mukesh Thummar</strong>, Gujarat, India ("we," "us," "our"), governing your use of <strong>StageCraft — AI Interior Design</strong> (the "App").</p>
+        <div class="callout callout-blue">
+            <strong>By downloading, installing, or using the App, you confirm that you:</strong><br>
+            (a) have read and understood these Terms;<br>
+            (b) are at least 13 years old (or of legal age in your jurisdiction);<br>
+            (c) agree to be bound by these Terms and our Privacy Policy.<br><br>
+            If you do not agree to these Terms, you must immediately uninstall the App and cease using it.
+        </div>
+        <p>These Terms apply to all versions of the App, including all updates, upgrades, and new features released under the same App listing on the Google Play Store.</p>
+    </div>
 
-    <h2>3. AI Credits &amp; Purchases</h2>
-    <ul>
-      <li>Each AI generation or edit consumes credits as shown in the App.</li>
-      <li>Credit packs are one-time purchases processed through Google Play Billing and managed via RevenueCat.</li>
-      <li>Prices, credit amounts, and features may change; current offers are shown at purchase time.</li>
-      <li>Refunds follow <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play refund policies</a>.</li>
-      <li>Use “Restore Purchases” if you reinstall the App on the same Google account.</li>
-    </ul>
+    <!-- ── 2. License ─────────────────────────────────────────────── -->
+    <div class="section" id="license">
+        <div class="section-head">
+            <div class="section-icon icon-green">📱</div>
+            <div><h2>License Grant</h2><div class="section-num">Section 02</div></div>
+        </div>
+        <p>Subject to your compliance with these Terms, LogicGridApps grants you a <strong>limited, personal, non-exclusive, non-transferable, revocable license</strong> to:</p>
+        <ul>
+            <li>Download, install, and use the App on Android devices that you own or control</li>
+            <li>Use the App solely for your own personal, non-commercial interior design visualization purposes</li>
+        </ul>
+        <p>This license does not include any right to sublicense, sell, resell, transfer, assign, or otherwise make the App available to any third party.</p>
+        <p>We reserve all rights in and to the App not expressly granted in these Terms.</p>
+    </div>
 
-    <h2>4. User Content &amp; License</h2>
-    <ul>
-      <li>You retain ownership of photos you upload.</li>
-      <li>You grant us a limited license to process your photos solely to provide the service (generate and deliver AI designs).</li>
-      <li>You represent that you have the right to upload the images you submit and that they do not violate any third-party rights or laws.</li>
-      <li>Do not upload unlawful, harmful, explicit, or copyrighted content without permission.</li>
-    </ul>
+    <!-- ── 3. Permitted Use ───────────────────────────────────────── -->
+    <div class="section" id="permitted">
+        <div class="section-head">
+            <div class="section-icon icon-teal">🟢</div>
+            <div><h2>Permitted Use</h2><div class="section-num">Section 03</div></div>
+        </div>
+        <p>You are authorized to use the App for the following purposes:</p>
+        <div class="two-col">
+            <div class="col-box">
+                <h3>Core Features</h3>
+                <ul>
+                    <li>Upload or capture room photos</li>
+                    <li>Generate AI interior design images</li>
+                    <li>Browse styles, palettes, and room types</li>
+                    <li>Save and view local design history</li>
+                </ul>
+            </div>
+            <div class="col-box">
+                <h3>Optional Features</h3>
+                <ul>
+                    <li>Purchase AI credit packs</li>
+                    <li>Edit or refine AI-generated designs</li>
+                    <li>Export or share results where available</li>
+                    <li>Watch optional ads when enabled</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-    <h2>5. Acceptable Use</h2>
-    <p>You agree not to:</p>
-    <ul>
-      <li>Use the App for illegal purposes or to harm others</li>
-      <li>Reverse engineer, scrape, or abuse the API</li>
-      <li>Circumvent credit, paywall, or advertising systems</li>
-      <li>Submit malware, spam, or automated bulk requests</li>
-      <li>Misrepresent AI-generated images as guaranteed real-world outcomes</li>
-    </ul>
-    <p>We may suspend or terminate access for violations.</p>
+    <!-- ── 4. Prohibited Use ──────────────────────────────────────── -->
+    <div class="section" id="prohibited">
+        <div class="section-head">
+            <div class="section-icon icon-red">🚫</div>
+            <div><h2>Prohibited Use</h2><div class="section-num">Section 04</div></div>
+        </div>
+        <div class="callout callout-red">
+            Violation of any prohibition below may result in immediate termination of your license and, where applicable, legal action.
+        </div>
+        <p>You agree <strong>not</strong> to:</p>
+        <ul>
+            <li>Reverse engineer, decompile, disassemble, or attempt to derive the source code of the App</li>
+            <li>Use the App for any commercial, business, or revenue-generating purpose without prior written consent from LogicGridApps</li>
+            <li>Copy, modify, adapt, translate, or create derivative works based on the App</li>
+            <li>Remove, alter, or obscure any proprietary notices, branding, or labels in the App</li>
+            <li>Use automated scripts, bots, scrapers, or crawlers to extract data from the App</li>
+            <li>Attempt to bypass, disable, or interfere with any security or access control features</li>
+            <li>Use the App in violation of any applicable local, state, national, or international law or regulation</li>
+            <li>Circumvent or interfere with the advertising system, including using ad blockers within the App, artificially clicking ads, or attempting to generate fraudulent ad impressions</li>
+            <li>Misrepresent AI-generated images as guaranteed real-world outcomes or professional architectural deliverables</li>
+            <li>Impersonate LogicGridApps or any representative in communications or reviews</li>
+        </ul>
+    </div>
 
-    <h2>6. Intellectual Property</h2>
-    <p>The App, branding, UI, and underlying technology are owned by Jay Studio or licensors. AI-generated images are provided for your personal, non-commercial use unless otherwise stated. Third-party services (Google, Firebase, RevenueCat, Unsplash, etc.) have their own terms.</p>
+    <!-- ── 5. Advertising Terms ───────────────────────────────────── -->
+    <div class="section" id="ads-terms">
+        <div class="section-head">
+            <div class="section-icon icon-amber">📢</div>
+            <div><h2>Advertising</h2><div class="section-num">Section 05</div></div>
+        </div>
+        <p>The App is provided free of charge and is supported by advertising through <strong>Google AdMob</strong>. By using the App, you agree to the display of advertisements as described below.</p>
 
-    <h2>7. Disclaimers</h2>
-    <p>THE APP AND AI OUTPUTS ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT DESIGNS WILL BE ACCURATE, COMPLETE, OR SUITABLE FOR CONSTRUCTION OR PURCHASE DECISIONS.</p>
+        <h3>Ad Formats</h3>
+        <ul>
+            <li><strong>Interstitial ads:</strong> Full-screen ads displayed at natural app transition points (e.g., after saving a transaction, switching view modes). Frequency is controlled by Firebase Remote Config to limit interruption.</li>
+            <li><strong>Rewarded video ads:</strong> Optional ads you may choose to watch in exchange for AI credits or to unlock Export/Import features. These are never compulsory.</li>
+        </ul>
 
-    <h2>8. Limitation of Liability</h2>
-    <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, JAY STUDIO SHALL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, OR GOODWILL, ARISING FROM YOUR USE OF THE APP. OUR TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID US IN THE TWELVE (12) MONTHS BEFORE THE CLAIM, OR USD $50, WHICHEVER IS GREATER.</p>
+        <h3>Your Obligations Regarding Ads</h3>
+        <ul>
+            <li>You agree not to use any ad-blocking software, extensions, or tools that prevent ads from being shown within the App</li>
+            <li>You agree not to click on ads fraudulently, repeatedly, or in an automated manner</li>
+            <li>You agree not to attempt to manipulate or interfere with the ad-serving infrastructure</li>
+        </ul>
 
-    <h2>9. Advertising</h2>
-    <p>When enabled, the App may show Google ads (e.g. rewarded interstitial after closing the paywall without purchase). Ad serving is subject to Google’s policies. You can manage ad personalization in your device settings.</p>
+        <h3>AdMob Terms</h3>
+        <p>Advertising served through Google AdMob is subject to Google's <a href="https://policies.google.com/technologies/ads" target="_blank">Advertising Policies</a> and <a href="https://support.google.com/admob/answer/48182" target="_blank">AdMob Publisher Policies</a>. Google may use cookies, advertising identifiers, and other technologies to serve relevant ads.</p>
 
-    <h2>10. Analytics &amp; Remote Configuration</h2>
-    <p>We use Firebase Analytics to understand app usage and Firebase Remote Config to deliver feature settings. See our <a href="privacy-policy.html">Privacy Policy</a> for details.</p>
+        <h3>Ad Content</h3>
+        <p>LogicGridApps does not control the specific content of advertisements served by AdMob or its advertising partners. If you encounter an advertisement you believe violates Google's policies, you may report it using the "Why this ad?" or "Report this ad" option provided by AdMob.</p>
 
-    <h2>11. Termination</h2>
-    <p>You may stop using the App at any time by uninstalling it. We may modify, suspend, or discontinue the App or these Terms with notice where reasonable. Sections that by nature should survive (disclaimers, liability, governing law) will survive termination.</p>
+        <h3>Opting Out</h3>
+        <p>You can opt out of personalized advertising at any time via Android device settings: <strong>Settings → Google → Ads → Opt out of Ads Personalization</strong>. Non-personalized ads may still be shown.</p>
+    </div>
 
-    <h2>12. Governing Law</h2>
-    <p>These Terms are governed by the laws of India, without regard to conflict-of-law principles, unless mandatory local law requires otherwise. Disputes shall be resolved in courts of competent jurisdiction in India, unless applicable consumer law provides otherwise.</p>
+    <!-- ── 6. Photos --> & Rewarded Ads ───────────────────────────── -->
+    <div class="section" id="ai-terms">
+        <div class="section-head">
+            <div class="section-icon icon-purple">🤖</div>
+            <div><h2>AI Coach &amp; Credit System</h2><div class="section-num">Section 07</div></div>
+        </div>
+        <p>StageCraft operates on an <strong>AI credit</strong> system. Each generation or edit consumes credits. New users may receive a welcome free credit (Firebase Remote Config).</p>
+        <ul>
+            <li>Credit packs are one-time purchases via Google Play, managed by RevenueCat</li>
+            <li>Refunds follow <a href="https://play.google.com/about/play-terms/" target="_blank">Google Play policies</a></li>
+            <li>Credits have no cash value and cannot be transferred</li>
+        </ul>
+        <h3>AI Output Disclaimer</h3>
+        <p>AI designs are for <strong>inspiration and visualization only</strong>. See Section 8.</p>
+    </div>
 
-    <h2>13. Changes</h2>
-    <p>We may update these Terms. The updated version will be posted at this URL with a revised “Last updated” date. Continued use constitutes acceptance.</p>
+    <!-- ── 8. Design Disclaimer ────────────────────────────────── -->
+    <div class="section" id="design-disclaimer">
+        <div class="section-head">
+            <div class="section-icon icon-red">⚠️</div>
+            <div><h2>Design Disclaimer</h2><div class="section-num">Section 08</div></div>
+        </div>
+        <div class="callout callout-red">
+            <strong>IMPORTANT:</strong> StageCraft — AI Interior Design is an AI interior design visualization tool. It is <strong>NOT a licensed architect, interior designer, engineer, or contractor.</strong>
+        </div>
+        <p>All AI-generated interior images and suggestions:</p>
+        <ul>
+            <li>Are provided for <strong>inspiration and visualization only</strong></li>
+            <li>Do <strong>not</strong> constitute architectural, engineering, construction, or professional advice</li>
+            <li>Should <strong>not</strong> be relied upon as the sole basis for renovation, construction, or purchase decisions</li>
+            <li>May not reflect accurate dimensions, materials, lighting, or building codes</li>
+        </ul>
+        <p><strong>Always consult a qualified architect, interior designer, or contractor before making significant design or construction decisions.</strong></p>
 
-    <h2>14. Contact</h2>
-    <p>Questions about these Terms?<br />
-    Email: <a href="mailto:support@jaystudio.ai">support@jaystudio.ai</a></p>
+        <h3>Accuracy Limitations</h3>
+        <ul>
+            <li>AI may alter room proportions, furniture scale, or colors</li>
+            <li>Generated items may not be available for purchase in your region</li>
+            <li>Always verify layouts and materials before real-world implementation</li>
+            <li>LogicGridApps is not responsible for decisions made based on AI outputs in the App</li>
+        </ul>
 
-    <p class="meta"><a href="privacy-policy.html">Privacy Policy</a></p>
-  </div>
+        <h3>No Professional Endorsement</h3>
+        <p>The App does not represent endorsement by any furniture brand, retailer, or design professional.</p>
+    </div>
+
+    <!-- ── 9. Intellectual Property ───────────────────────────────── -->
+    <div class="section" id="ip">
+        <div class="section-head">
+            <div class="section-icon icon-indigo">©️</div>
+            <div><h2>Intellectual Property</h2><div class="section-num">Section 09</div></div>
+        </div>
+        <p>All intellectual property rights in the App — including but not limited to source code, design, UI/UX, algorithms, machine learning models, branding, the name "StageCraft — AI Interior Design," and associated logos — are the exclusive property of LogicGridApps / Mukesh Thummar.</p>
+        <p>These Terms do not transfer any intellectual property rights to you. Your use of the App does not grant you any rights to the App's intellectual property beyond the limited license in Section 2.</p>
+
+        <h3>Open-Source Components</h3>
+        <p>The App incorporates open-source libraries (including Jetpack Compose, Android Room, Coil, Retrofit, and others). These remain subject to their respective open-source licenses.</p>
+
+        <h3>User Content</h3>
+        <p>Room photos you upload remain yours. You grant LogicGridApps a limited license to process your photos solely to provide AI design generation. AI-generated images are for your personal, non-commercial use unless otherwise stated.</p>
+    </div>
+
+    <!-- ── 10. Third-Party Services ───────────────────────────────── -->
+    <div class="section" id="thirdparty-terms">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🔗</div>
+            <div><h2>Third-Party Services</h2><div class="section-num">Section 10</div></div>
+        </div>
+        <p>The App integrates third-party services. Your use of these services through the App is also subject to their respective terms and policies:</p>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Service</th><th>Provider</th><th>Applicable Terms</th></tr></thead>
+                
+                <tbody>
+                    <tr><td><strong>Google AdMob</strong></td><td>Google LLC</td><td><a href="https://policies.google.com/terms" target="_blank">Google ToS</a></td></tr>
+                    <tr><td><strong>Firebase</strong></td><td>Google LLC</td><td><a href="https://firebase.google.com/terms" target="_blank">Firebase ToS</a></td></tr>
+                    <tr><td><strong>Google Play Billing</strong></td><td>Google LLC</td><td><a href="https://play.google.com/intl/en_us/about/play-terms/" target="_blank">Play ToS</a></td></tr>
+                    <tr><td><strong>RevenueCat</strong></td><td>RevenueCat, Inc.</td><td><a href="https://www.revenuecat.com/terms" target="_blank">RevenueCat ToS</a></td></tr>
+                    <tr><td><strong>AI Processing API</strong></td><td>LogicGridApps / Vercel</td><td>These Terms</td></tr>
+                    <tr><td><strong>Unsplash CDN</strong></td><td>Unsplash</td><td><a href="https://unsplash.com/terms" target="_blank">Unsplash ToS</a></td></tr>
+                </tbody>
+
+            </table>
+        </div>
+        <p>LogicGridApps is not responsible for the availability, accuracy, content, practices, or policies of any third-party service. Outages or changes to third-party services (e.g., AI API unavailability or third-party CDN outages) are beyond our control.</p>
+    </div>
+
+    <!-- ── 11. Termination ────────────────────────────────────────── -->
+    <div class="section" id="termination">
+        <div class="section-head">
+            <div class="section-icon icon-red">🔚</div>
+            <div><h2>Termination</h2><div class="section-num">Section 11</div></div>
+        </div>
+        <p>These Terms are effective until terminated.</p>
+        <h3>Termination by You</h3>
+        <p>You may terminate these Terms at any time by uninstalling the App from all your devices. Uninstalling the App will delete all locally stored data.</p>
+        <h3>Termination by Us</h3>
+        <p>We may terminate or suspend your license immediately, without prior notice, if:</p>
+        <ul>
+            <li>You violate any provision of these Terms</li>
+            <li>We are required to do so by law or Google Play policy</li>
+            <li>We decide to discontinue the App</li>
+        </ul>
+        <p>Upon termination, the license granted in Section 2 automatically revokes. Sections 8, 9, 12, 13, and 14 survive termination.</p>
+    </div>
+
+    <!-- ── 12. Limitation of Liability ───────────────────────────── -->
+    <div class="section" id="liability">
+        <div class="section-head">
+            <div class="section-icon icon-amber">⚖️</div>
+            <div><h2>Disclaimer of Warranties &amp; Limitation of Liability</h2><div class="section-num">Section 12</div></div>
+        </div>
+        <h3>Disclaimer of Warranties</h3>
+        <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, LOGICGRIDAPPS EXPRESSLY DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND NON-INFRINGEMENT.</p>
+        <p>We do not warrant that:</p>
+        <ul>
+            <li>The App will be available, uninterrupted, or error-free</li>
+            <li>AI-generated designs will match real-world dimensions or materials exactly</li>
+            <li>AI outputs will be suitable for construction or purchase decisions, complete, or suitable for your financial situation</li>
+            <li>The App will be free of viruses or other harmful components</li>
+            <li>Third-party services (AdMob, Firebase, RevenueCat, Vercel) will be continuously available</li>
+        </ul>
+
+        <h3>Limitation of Liability</h3>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, LOGICGRIDAPPS AND ITS OPERATORS SHALL NOT BE LIABLE FOR:</p>
+        <ul>
+            <li>Any indirect, incidental, special, consequential, exemplary, or punitive damages</li>
+            <li>Loss of profits, data, goodwill, or business opportunities</li>
+            <li>Losses arising from reliance on AI-generated designs for construction, renovation, or purchase decisions</li>
+            <li>Damages arising from third-party service failures, outages, or policy changes</li>
+            <li>Unauthorized access to your device or App data</li>
+            <li>Any damages exceeding INR 500 (five hundred rupees), to the extent permitted by law</li>
+        </ul>
+        <p>Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability, so the above limitations may not fully apply to you.</p>
+    </div>
+
+    <!-- ── 13. Indemnification ─────────────────────────────────────── -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-icon icon-slate">🛡️</div>
+            <div><h2>Indemnification</h2><div class="section-num">Section 13</div></div>
+        </div>
+        <p>You agree to indemnify, defend, and hold harmless LogicGridApps, Mukesh Thummar, and their respective affiliates, from and against any claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or in connection with:</p>
+        <ul>
+            <li>Your use or misuse of the App</li>
+            <li>Your violation of these Terms</li>
+            <li>Your violation of any applicable law or third-party rights</li>
+            <li>Any content or data you submit, post, or otherwise make available through the App</li>
+        </ul>
+    </div>
+
+    <!-- ── 14. Governing Law ───────────────────────────────────────── -->
+    <div class="section" id="governing">
+        <div class="section-head">
+            <div class="section-icon icon-blue">🏛️</div>
+            <div><h2>Governing Law &amp; Dispute Resolution</h2><div class="section-num">Section 14</div></div>
+        </div>
+        <p>These Terms shall be governed by and construed in accordance with the laws of the <strong>Republic of India</strong>, without regard to its conflict of law provisions.</p>
+        <p>Any dispute, claim, or controversy arising out of or relating to these Terms or the use of the App shall be subject to the exclusive jurisdiction of the competent courts located in <strong>Gujarat, India</strong>.</p>
+        <p>Before initiating formal legal proceedings, you agree to first contact us at <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a> and attempt to resolve the dispute informally within 30 days.</p>
+    </div>
+
+    <!-- ── 15. Google Play Developer Policies ─────────────────────── -->
+    <div class="section">
+        <div class="section-head">
+            <div class="section-icon icon-green">▶️</div>
+            <div><h2>Google Play Compliance</h2><div class="section-num">Section 15</div></div>
+        </div>
+        <p>This App is distributed via the Google Play Store and complies with <a href="https://play.google.com/about/developer-content-policy/" target="_blank">Google Play Developer Program Policies</a>, including:</p>
+        <ul>
+            <li><strong>Sensitive Permissions Policy:</strong> A Prominent Disclosure Dialog is shown before requesting <code>READ_MEDIA_IMAGES</code> / <code>CAMERA</code>, explaining the sole purpose of the permission</li>
+            <li><strong>Personal &amp; Sensitive Data Policy:</strong> Room photos are sent to our AI backend only when you generate a design and never transmitted externally</li>
+            <li><strong>Ads Policy:</strong> Advertising is implemented using Google AdMob in compliance with Google's advertising policies; rewarded ads are always opt-in</li>
+            <li><strong>Families Policy:</strong> The App is not directed at children under 13</li>
+            <li><strong>User Data Policy:</strong> Users can delete all their data from within the App at any time</li>
+        </ul>
+        <div class="callout callout-green">
+            The App also complies with the <strong>Google Play Data Safety</strong> requirements. The Data Safety form submitted to Google Play accurately reflects the data collection and sharing practices described in this Privacy Policy.
+        </div>
+    </div>
+
+    <!-- ── 16. Changes to Terms ───────────────────────────────────── -->
+    <div class="section" id="changes-terms">
+        <div class="section-head">
+            <div class="section-icon icon-teal">🔄</div>
+            <div><h2>Changes to These Terms</h2><div class="section-num">Section 16</div></div>
+        </div>
+        <p>We may revise these Terms at any time. When we make material changes, we will update the "Last Updated" date at the top of this page. For significant changes, we may provide an in-app notification.</p>
+        <p><strong>Your continued use of the App after the revised Terms become effective constitutes your acceptance of the changes.</strong> If you do not agree to the revised Terms, you must stop using the App and uninstall it.</p>
+    </div>
+
+    <!-- ── 17. Contact ────────────────────────────────────────────── -->
+    <div class="section" id="contact-terms">
+        <div class="section-head">
+            <div class="section-icon icon-blue">✉️</div>
+            <div><h2>Contact</h2><div class="section-num">Section 17</div></div>
+        </div>
+        <p>For questions about these Terms, to report a policy concern, or to seek legal clarification:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a></li>
+            <li><strong>Developer:</strong> Mukesh Thummar</li>
+            <li><strong>Company:</strong> LogicGridApps</li>
+            <li><strong>Location:</strong> Gujarat, India</li>
+        </ul>
+        <div class="callout callout-blue">
+            By using the App, you acknowledge that you have read these Terms of Use and the Privacy Policy, and agree to be bound by both documents.
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <strong>StageCraft — AI Interior Design</strong><br>
+    © 2026 LogicGridApps · Mukesh Thummar · Gujarat, India<br>
+    <a href="mailto:logicgridapps@gmail.com">logicgridapps@gmail.com</a>
+</footer>
+
 </body>
 </html>
